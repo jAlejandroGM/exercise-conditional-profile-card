@@ -47,14 +47,10 @@ function render(variables = {}) {
   if (variables.country === "Germany") variables.country = "Germany";
   if (variables.country === "Canada") variables.country = "Canada";
   if (variables.country === "Venezuela") variables.country = "Venezuela";
-  if (variables.twitter === null)
-    variables.twitter = "https://twitter.com/4geeksacademy";
-  if (variables.github === null)
-    variables.github = "https://github.com/4geeksacademy";
-  if (variables.linkedin === null)
-    variables.linkedin = "https://linkedin.com/school/4geeksacademy";
-  if (variables.instagram === null)
-    variables.instagram = "https://instagram.com/4geeksacademy";
+  if (variables.twitter === null) variables.twitter = "4geeksacademy";
+  if (variables.github === null) variables.github = "4geeksacademy";
+  if (variables.linkedin === null) variables.linkedin = "school/4geeksacademy";
+  if (variables.instagram === null) variables.instagram = "4geeksacademy";
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
@@ -66,7 +62,7 @@ function render(variables = {}) {
           <ul class=${variables.socialMediaPosition}>
             <li><a href="https://twitter.com/${variables.twitter}"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${variables.github}"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/in/${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://linkedin.com/${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/${variables.instagram}"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
